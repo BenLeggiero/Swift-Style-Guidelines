@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /punctuation/
+permalink: /Punctuation/
 date:
     written: 2019-07-23 23:00
 pagination:

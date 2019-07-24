@@ -1,5 +1,6 @@
 ---
 layout: home
+permalink: /All/
 date:
     written: 2019-07-23 23:00
 #    edit: 2019-07-23 23:00

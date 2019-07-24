@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /cocoa-xcode-and-swift-specific-features/
+permalink: /Cocoa-Xcode-and-Swift-Specific-Features/
 date:
     written: 2019-07-23 23:00
 pagination:
