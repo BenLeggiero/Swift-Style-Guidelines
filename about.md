@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /about/
+permalink: /About/
 date:
     written: 2019-07-23 23:00
 pagination:

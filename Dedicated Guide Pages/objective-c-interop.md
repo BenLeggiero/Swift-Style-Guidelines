@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /objective-c-interop/
+permalink: /Objective-C-Interop/
 date:
     written: 2019-07-23 23:00
 pagination:
