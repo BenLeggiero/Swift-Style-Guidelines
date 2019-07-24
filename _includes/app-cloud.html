@@ -1,0 +1,11 @@
+
+<ul class='app-cloud'>
+    {% for app in app_array %}
+    <li>{% include app-cloud-app.html
+        appName=app.name
+        iconUrl=app.iconUrl
+        darkMode_iconUrl=app.darkMode_iconUrl
+        websiteUrl=app.websiteUrl
+    %}</li>
+    {% andfor %}
+</ul>

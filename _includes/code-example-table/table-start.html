@@ -1,0 +1,42 @@
+{% if include.left != nil %}
+    {% assign left = include.left %}
+{% else %}
+    {% assign left = 'Good' %}
+{% endif %}
+
+{% if include.left-class != nil %}
+    {% assign left-class = include.left-class | downcase %}
+{% else %}
+    {% assign left-class = left | downcase %}
+{% endif %}
+
+{% if include.left-name != nil %}
+    {% assign left-name = include.left-name %}
+{% else %}
+    {% assign left-name = left %}
+{% endif %}
+
+{% if include.right != nil %}
+    {% assign right = include.right %}
+{% else %}
+    {% assign right = 'Bad' %}
+{% endif %}
+
+{% if include.right-class != nil %}
+    {% assign right-class = include.right-class | downcase %}
+{% else %}
+    {% assign right-class = right | downcase %}
+{% endif %}
+
+{% if include.right-name != nil %}
+    {% assign right-name = include.right-name %}
+{% else %}
+    {% assign right-name = right %}
+{% endif %}
+
+
+<div class="wide-table-holder code-example-table-holder">
+<table class="code-example-table"><thead>
+<th class="{{ left-class }}">{% if include.left-comment %}<small>{{ include.left-comment }}</small>{% endif %}{{ left-name }}</th>
+{% unless include.exclude-right %}<th class="{{ right-class }}">{{ right-name }}{% if include.right-comment %}<small>{{ include.right-comment }}</small>{% endif %}</th>{% endunless %}
+</thead><tbody>

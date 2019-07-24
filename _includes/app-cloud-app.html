@@ -1,0 +1,11 @@
+<a href="{{ include.websiteUrl }}" target="_blank">
+    <figure class="app-cloud-app{% if include.highly %} highly-recommended{% endif %}">
+        <div class="app-logo-holder   flex-column flex-vert-bottom flex-horiz-center">
+            <img src="{{ include.iconUrl }}" class="app-logo" data-target-theme="light"/>{% if include.darkMode_iconUrl %}
+            <img src="{{ include.darkMode_iconUrl }}" class="app-logo" data-target-theme="dark"/>{% endif %}
+        </div>
+        <figcaption>
+            {{ include.appName }}
+        </figcaption>
+    </figure>
+</a>

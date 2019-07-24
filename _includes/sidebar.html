@@ -1,0 +1,59 @@
+
+<nav class="sidebar   flex-column flex-vert-space-between">
+    <section>
+        <header>
+            <figure>
+                <a href="/"><img src="{{ site.sidebar.header-background-relative-url }}" class="avatar"/></a>
+            </figure>
+        </header>
+        <ul>
+            {% unless page.url == "/" %}
+            <li><a href="/" class="button">All Guidelines</a></li>
+            {% endunless %}
+            {% assign checkSlice = page.url | slice: 0, page.url.size | downcase %}
+            {% unless checkSlice == "/about/" %}
+            <li><a href="/About" class="button">About</a></li>
+            {% endunless %}
+        </ul>
+        <section>
+            <h2>Individual Sections</h2>
+            <ul>
+                {% unless checkSlice == "/naming/" %}
+                <li><a href="/Naming" class="button">Naming</a></li>
+                {% endunless %}
+                {% unless checkSlice == "/punctuation/" %}
+                <li><a href="/Punctuation" class="button">Punctuation</a></li>
+                {% endunless %}
+                {% unless checkSlice == "/whitespace/" %}
+                <li><a href="/Whitespace" class="button">Whitespace</a></li>
+                {% endunless %}
+                {% unless checkSlice == "/scoping/" %}
+                <li><a href="/Scoping" class="button">Scoping</a></li>
+                {% endunless %}
+                {% unless checkSlice == "/objective-c-interop/" %}
+                <li><a href="/Objective-C-Interop" class="button">Objective-C Interop</a></li>
+                {% endunless %}
+                {% unless checkSlice == "/cocoa-xcode-and-swift-specific-features/" %}
+                <li><a href="/Cocoa-Xcode-and-Swift-Specific-Features" class="button">Cocoa-, Xcode-, and Swift-Specific Features</a></li>
+                {% endunless %}
+                {% unless checkSlice == "/general-patterns/" %}
+                <li><a href="/General-Patterns" class="button">General Patterns</a></li>
+                {% endunless %}
+            </ul>
+        </section>
+    </section>
+
+    <section>
+        <ul class="theme-color-selection-list">
+            <li><a href="#Brightness-Dark"  onclick="return false" title="Dark"  class="color-swatch" theme-swatch-type="brightness" theme-swatch-value="dark" >Dark</a></li>
+            <li><a href="#Brightness-Light" onclick="return false" title="Light" class="color-swatch" theme-swatch-type="brightness" theme-swatch-value="light">Light</a></li>
+        </ul>
+        <ul class="theme-color-selection-list">
+            <li><a href="#Theme-Water" onclick="return false" title="Water" class="color-swatch" theme-swatch-type="color" theme-swatch-value="water">Water</a></li>
+            <li><a href="#Theme-Earth" onclick="return false" title="Earth" class="color-swatch" theme-swatch-type="color" theme-swatch-value="earth">Earth</a></li>
+            <li><a href="#Theme-Fire"  onclick="return false" title="Fire"  class="color-swatch" theme-swatch-type="color" theme-swatch-value="fire" >Fire</a></li>
+            <li><a href="#Theme-Air"   onclick="return false" title="Air"   class="color-swatch" theme-swatch-type="color" theme-swatch-value="air"  >Air</a></li>
+            <!-- <li><a href="#Theme-Magic" onclick="return setTheme('Magic')" title="Magic" class="color-swatch theme-color-swatch-magic">Magic</a></li> -->
+        </ul>
+    </section>
+</nav>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="brightness-dark code-highlighting-alt">
+<head>
+<title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.title }}</title>
+
+{% include meta.html %}
+
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<link rel="stylesheet" type="text/css" id="framework-stylesheet" href="https://stylesheets.bhstudios.org/assets/v2/neon/neon-renderer.css" />
+<link rel="stylesheet" type="text/css" id="theme-stylesheet" href="https://stylesheets.bhstudios.org/assets/v2/neon/neon-fire.css" />
+<link rel="stylesheet" type="text/css" href="https://stylesheets.bhstudios.org/assets/v2/neon/neon-tables.css" />
+<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/main.css" />
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons|Noto+Sans|Roboto" />
+<link rel="alternate" type="application/rss+xml" title="{{ site.title }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+
+<script src="https://shared.bhstudios.org/_js/jquery-bh-preferred.js">/* jQuery */</script>
+<script src="https://scripts.bhstudios.org/assets/v2/general/js/lib/kotlin.js">/* Kotlin/JS for BHStudios General Script */</script>
+<script src="https://scripts.bhstudios.org/assets/v2/general/js/BHStudios%20General%20Scripts.js">/* BHStudios General Script */</script>
+</head>
+
+<body>
+<header class="app-bar">
+    <a href="#" class="flat button show-sidebar-button" onclick="return false;"><i class="material-icons">menu</i></a>
+    <a href="/" class="flat button   back-to-root-link"><h1 class="title">{% if page.title %}{{ page.title }} – {% endif %}{{ site.title }}</h1></a>
+    <span class="layout-placeholder"></span>
+</header>
+
+{{ content }}
+
+
+
+<footer class="footer">
+    {% include svg-icons.html %}
+</footer>
+
+
+{% include sidebar.html %}
+
+{% include analytics.html %}
+</body>
+</html>

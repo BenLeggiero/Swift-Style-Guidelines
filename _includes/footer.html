@@ -1,0 +1,31 @@
+
+<footer class="card">
+    {% if page.categories %}
+    <ol class="chips   plain   flex-row flex-wrap flex-horiz-center flex-vert-center">
+        {% for category in page.categories %}
+        <li><span class="chip" disabled data-category-name="{{ category }}">{{ category }}</span></li>
+        {% endfor %}
+    </ol>
+    {% endif %}
+
+    <ol class="plain dates-and-times">
+        <li>
+            <time class="date" datetime="{{ page.date.written | date_to_xmlschema }}">
+                <span>{% if page.date.edit %}Originally written{% else %}Written{% endif %}</span> {{ page.date.written | date: "%F <span>(a %A)</span> at <span>%R %Z</span>" }}
+            </time>
+        </li>
+        {% if page.date.edit %}
+        <li>
+            <time class="date" datetime="{{ page.date.edit | date_to_xmlschema }}">
+                Updated {{ page.date.edit | date: "%F (a %A) at %R %Z" }}
+            </time>
+        </li>
+        {% endif %}
+    </ol>
+
+    <footer class="oss-links">
+        {% if site.oss.history-url-root %}<a href="{{ site.oss.history-url-root }}{{ page.path }}{{ site.oss.history-url-suffix }}" title="Post History" target="_blank" class="low-emphasis button"><i class="material-icons">history</i> <span>History</span></a>{% endif %}
+        {% if site.oss.edit-url-root %}<a href="{{ site.oss.edit-url-root }}{{ page.path }}{{ site.oss.edit-url-suffix }}" title="Suggest an Edit" target="_blank" class="low-emphasis button"><i class="material-icons">edit</i> <span>Suggest an Edit</span></a>{% endif %}
+        {% if site.oss.create-new-issue-url %}<a href="{{ site.oss.create-new-issue-url }}" title="File an Issue" target="_blank" class="low-emphasis button"><i class="material-icons">bug_report</i> <span>File an Issue</span></a>{% endif %}
+    </footer>
+</footer>

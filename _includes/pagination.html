@@ -1,0 +1,9 @@
+<nav class="flex-row flex-wrap flex-horiz-space-between">
+<div>{% if include.previous-url && include.previous-name %}
+<a href="{{ include.previous-url }}" class="button medium-emphasis"><i class="material-icons">navigate_before</i><span>{{ include.previous-name }}</span></a>
+{% endif %}</div>
+
+<div>{% if include.next-url && include.next-name %}
+<a href="{{ include.next-url }}" class="button medium-emphasis"><span>{{ include.next-name }}</span><i class="material-icons">navigate_next</i></a>
+{% endif %}</div>
+</nav>

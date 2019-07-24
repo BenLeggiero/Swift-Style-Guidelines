@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<main class="widest-desktop">
+<article class="page">
+    <section class="entry">
+        {{ content }}
+    </section>
+
+    {% if page.pagination %}
+        {% include pagination.html
+            previous-name=page.pagination.previous.name
+            previous-url=page.pagination.previous.url
+            next-name=page.pagination.next.name
+            next-url=page.pagination.next.url
+        %}
+    {% endif %}
+
+    {% include footer.html %}
+</article>
+</main>

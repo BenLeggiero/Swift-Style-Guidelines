@@ -1,0 +1,4 @@
+{% assign pageLinkFileName = include.pageLinkFileName | downcase %}
+{% assign possibleThisPageLink = "/" | append: pageLinkFileName | append: "/" %}
+{% assign checkSlice = page.url | slice: 0, page.url.size | downcase %}
+{% unless checkSlice == possibleThisPageLink %}<span class="dedicated-guide-page-link-holder"><a href="/{{ include.pageLinkFileName }}" class="dedicated-guide-page-link low-emphasis button icon-button" title="Link to only this section"><i class="material-icons">bookmark_border</i></a></span>{% endunless %}
