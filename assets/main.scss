@@ -58,9 +58,9 @@ main {
 
     --card-background: var(--theme-background-color-at-level-raised);
 
-    .sidebar-shown & {
-        transform: translateX(calc(var(--sidebar-default-width) / 3));
-    }
+    // .sidebar-shown & {
+    //     transform: translateX(calc(var(--main-total-inline-margin) / 2));
+    // }
 
     .code-example-table-holder {
         /** Make it go screen-edge-to-screen-edge */
