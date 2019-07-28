@@ -8,9 +8,12 @@
         </header>
         <ul>
             {% unless page.url == "/" %}
-            <li><a href="/" class="button">All Guidelines</a></li>
+            <li><a href="/" class="button">Choose Format</a></li>
             {% endunless %}
             {% assign checkSlice = page.url | slice: 0, page.url.size | downcase %}
+            {% unless checkSlice == "/all/" %}
+            <li><a href="/All" class="button">All Guidelines</a></li>
+            {% endunless %}
             {% unless checkSlice == "/about/" %}
             <li><a href="/About" class="button">About</a></li>
             {% endunless %}
